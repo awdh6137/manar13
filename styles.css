@@ -1,0 +1,90 @@
+/* إعدادات عامة للصفحة */
+body {
+    font-family: 'Amiri', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+    margin: 0;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* تنسيق الأسماء */
+.name, #nameContainer {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    animation: popIn 1.5s ease forwards;
+    margin: 15px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* حركة الأسماء */
+@keyframes popIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* تنسيق الأزرار */
+.btn {
+    background: linear-gradient(45deg, #ff6a95, #ffc371);
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 6px 10px rgba(255, 107, 147, 0.5);
+}
+
+.btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 15px rgba(255, 107, 147, 0.6);
+}
+
+/* تنسيق المعلومات */
+.info, .work-info {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 10px;
+    text-align: right;
+    animation: fadeSlideIn 1s ease forwards;
+    border-left: 5px solid #ff6a95;
+}
+
+/* حركة الظهور */
+@keyframes fadeSlideIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* تنسيق الصور */
+.gallery img {
+    width: 100px;
+    height: auto;
+    margin: 10px;
+    border-radius: 12px;
+    transition: transform 0.4s, box-shadow 0.4s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
